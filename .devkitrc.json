@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/devkit.json",
+  "appName": "devkit",
+  "ai": {
+    "provider": "gemini",
+    "model": "gemini-flash-latest",
+    "temperature": 0.2
+  },
+  "security": {
+    "allowExternalPaths": false,
+    "maxFileSizeKb": 512,
+    "redactSecrets": true
+  },
+  "ui": {
+    "theme": "default",
+    "interactive": true
+  }
+}

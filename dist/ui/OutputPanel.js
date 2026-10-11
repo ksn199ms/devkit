@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Box, Text } from 'ink';
+export const OutputPanel = ({ title, output, isRunning, exitCode }) => {
+    return (_jsxs(Box, { flexDirection: "column", marginY: 1, children: [_jsxs(Box, { borderStyle: "single", borderColor: isRunning ? 'cyan' : exitCode === 0 ? 'green' : 'gray', paddingX: 1, children: [_jsx(Text, { bold: true, children: title }), _jsx(Text, { dimColor: true, children: " \u2014 " }), isRunning ? (_jsx(Text, { color: "cyan", children: "Running..." })) : exitCode === 0 ? (_jsx(Text, { color: "green", children: "Completed (0)" })) : (_jsxs(Text, { color: "red", children: ["Exited (", exitCode ?? 1, ")"] }))] }), _jsx(Box, { flexDirection: "column", paddingX: 1, marginY: 1, children: output.length > 0 ? _jsx(Text, { children: output }) : _jsx(Text, { dimColor: true, children: "Waiting for output..." }) }), !isRunning && (_jsx(Box, { marginTop: 1, children: _jsx(Text, { dimColor: true, children: "Press [Esc] or [Enter] to return to command palette." }) }))] }));
+};
+//# sourceMappingURL=OutputPanel.js.map

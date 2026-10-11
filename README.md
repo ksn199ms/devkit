@@ -34,19 +34,44 @@ DevKit is a fast, restrained, and modular command-line tool designed for daily s
 
 ## Installation
 
-### Global Installation
+### Option 1: Install Globally via GitHub (Recommended)
+You can install DevKit globally on your system directly from GitHub using npm without needing npm registry publication:
+
 ```bash
-npm install -g devkit
+# Using GitHub repository URL:
+npm install -g https://github.com/ksn199ms/devkit.git
+
+# Or using GitHub shorthand:
+npm install -g ksn199ms/devkit
 ```
 
-### Local Project Installation
+Once installed, the `devkit` command is available everywhere in your terminal:
 ```bash
-npm install --save-dev devkit
+devkit doctor
+devkit chat --message "Hello"
 ```
 
-### Run with `npx`
+### Option 2: Run Directly without Installing (via `npx`)
+Run any DevKit command instantly using `npx` directly from GitHub:
+
 ```bash
-npx devkit --help
+npx github:ksn199ms/devkit doctor
+npx github:ksn199ms/devkit chat --message "Summarize project"
+```
+
+### Option 3: Install from Source (Clone & Link)
+For local development or customization:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/ksn199ms/devkit.git
+cd devkit
+
+# 2. Install dependencies & build
+npm install
+
+# 3. Link globally
+npm link
 ```
 
 ---
